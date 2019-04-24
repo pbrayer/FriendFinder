@@ -1,1 +1,231 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <title>GoT Friend Finder</title>
+<body>
+    <div class = "container">
+        <h2>Questions</h2>
+        <br>
+        <h3>Personal Information:</h3>
+         <h4>Name (Required)</h4>
+         <input type="text" id="name" class="form-control" required="">
+         <h4>Profile Photo (Optional)</h4>
+         <input type="text" id="photo" class="form-control" required="">
+         <h4>Gender Searching for (Required)</h4>
+         <select class="chosen-select" id="gender">
+                <option value=""></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
+         <br>
+         <br>
+         <strong><h3>Question 1</h3></strong>
+         <h4>You think Robert Baratheon was a great king.</h4>
+         <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <br>
+              <br>
+              <strong><h3>Question 2</h3></strong>
+              <h4>You prefer violence over discussion.</h4>
+              <select class="chosen-select" id="q2">
+                     <option value=""></option>
+                     <option value="1">1 (Strongly Disagree)</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5 (Strongly Agree)</option>
+                   </select>
+                   <br>
+                   <br>
+                   <strong><h3>Question 3</h3></strong>
+                   <h4>You would rather own a direwolf than a dragon.</h4>
+                   <select class="chosen-select" id="q3">
+                          <option value=""></option>
+                          <option value="1">1 (Strongly Disagree)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <br>
+                        <strong><h3>Question 4</h3></strong>
+                        <h4>You prioritize honor above family.</h4>
+                        <select class="chosen-select" id="q4">
+                               <option value=""></option>
+                               <option value="1">1 (Strongly Disagree)</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                               <option value="5">5 (Strongly Agree)</option>
+                             </select>
+                             <br>
+                             <br>
+                             <strong><h3>Question 5</h3></strong>
+                             <h4>Magic is cooler than swordplay.</h4>
+                             <select class="chosen-select" id="q5">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                  </select>
+                                  <br>
+                                  <br>
+                                  <strong><h3>Question 6</h3></strong>
+                                 <h4> If you saw a White Walker, you'd shake in your booties.</h4>
+                                  <select class="chosen-select" id="q6">
+                                         <option value=""></option>
+                                         <option value="1">1 (Strongly Disagree)</option>
+                                         <option value="2">2</option>
+                                         <option value="3">3</option>
+                                         <option value="4">4</option>
+                                         <option value="5">5 (Strongly Agree)</option>
+                                       </select>
+                                       <br>
+                                       <br>
+                                       <strong><h3>Question 7</h3></strong>
+                                       <h4>Jon Snow should have never been resurrected.</h4>
+                                       <select class="chosen-select" id="q7">
+                                              <option value=""></option>
+                                              <option value="1">1 (Strongly Disagree)</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5 (Strongly Agree)</option>
+                                            </select>
+                                            <br>
+                                            <br>
+                                            <strong><h3>Question 8</h3></strong>
+                                            <h4>Religion has no place in Westeros.</h4>
+                                            <select class="chosen-select" id="q8">
+                                                   <option value=""></option>
+                                                   <option value="1">1 (Strongly Disagree)</option>
+                                                   <option value="2">2</option>
+                                                   <option value="3">3</option>
+                                                   <option value="4">4</option>
+                                                   <option value="5">5 (Strongly Agree)</option>
+                                                 </select>
+                                                 <br>
+                                                 <br>
+                                                 <strong><h3>Question 9</h3></strong>
+                                                 <h4>You don't care much for politics; you prefer to stay out of it.</h4>
+                                                 <select class="chosen-select" id="q9">
+                                                        <option value=""></option>
+                                                        <option value="1">1 (Strongly Disagree)</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5 (Strongly Agree)</option>
+                                                      </select>
+                                                      <br>
+                                                      <br>
+                                                      <strong><h3>Question 10</h3></strong>
+                                                      <h4>Dothraki are uncivilized barbarians.</h4>
+                                                      <select class="chosen-select" id="q10">
+                                                             <option value=""></option>
+                                                             <option value="1">1 (Strongly Disagree)</option>
+                                                             <option value="2">2</option>
+                                                             <option value="3">3</option>
+                                                             <option value="4">4</option>
+                                                             <option value="5">5 (Strongly Agree)</option>
+                                                           </select>
+                                                           <br>
+                                                            <br>
+                                                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"></i>
+                                                                Submit answers and find your match</button>
+    </div>
+    <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                  <h2 id="match-name"></h2>
+                  <img id="match-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+</body>
+<script type = "text/javascript">
+// Capture the form inputs
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "" && this.id != "photo"){
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userData = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          gender: $("#gender").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // AJAX post the data to the friends API.
+        $.post("/api/friends", userData, function(data) {
+
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+</script>
