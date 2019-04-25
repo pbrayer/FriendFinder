@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <style>
+      body{
+    font-family: 'Cinzel Decorative', cursive;
+        }
+     .btn{
+         float: right;
+     }
+        </style>
     <title>GoT Friend Finder</title>
 <body>
     <div class = "container">
-        <h2>Questions</h2>
+        <h2>Questions <a href = "/"><button type = "button" class = "btn btn-lg btn-primary" >Head Back Home</button></a></h2>
+        <hr>
         <br>
         <h3>Personal Information:</h3>
          <h4>Name (Required)</h4>
@@ -148,11 +157,34 @@
                                                             <br>
                                                             <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"></i>
                                                                 Submit answers and find your match</button>
+                                                                <hr>
+                                                                <br>
+                                                                <br>
+                                                                <br>
+                                                                <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+
+                                                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                                                                          <span class="navbar-toggler-icon"></span>
+                                                                        </button>
+                                                                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                                                                          <ul class="navbar-nav mr-auto">
+                                                                            <li class="nav-item">
+                                                                              <a class="nav-link" href="/api/friends">API Character List </a>
+                                                                            </li>
+                                                                            <!-- <li>"|"</li>
+                                                                            <li class="nav-item">
+                                                                              <a class="nav-link" href="/api/waitlist">API Waitlist</a>
+                                                                            </li> -->
+                                                                    
+                                                                    
+                                                                          </ul>
+                                                                        </div>
+                                                                      </nav>
     </div>
     <div id="results-modal" class="modal fade" role="dialog">
             <div class="modal-dialog">
         
-              <!-- Modal content-->
+              
               <div class="modal-content">
                 <div class="modal-header">
                   <h2 class="modal-title"><strong>Best Match</strong></h2>
@@ -170,11 +202,11 @@
           </div>
 </body>
 <script type = "text/javascript">
-// Capture the form inputs
+
     $("#submit").on("click", function(event) {
       event.preventDefault();
 
-      // Form validation
+     
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function() {
@@ -192,9 +224,8 @@
         return isValid;
       }
 
-      // If all required fields are filled
+      
       if (validateForm()) {
-        // Create an object for the user"s data
         var userData = {
           name: $("#name").val(),
           photo: $("#photo").val(),
@@ -213,14 +244,14 @@
           ]
         };
 
-        // AJAX post the data to the friends API.
+       
         $.post("/api/friends", userData, function(data) {
 
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    
           $("#match-name").text(data.name);
           $("#match-img").attr("src", data.photo);
 
-          // Show the modal with the best match
+        
           $("#results-modal").modal("toggle");
 
         });
